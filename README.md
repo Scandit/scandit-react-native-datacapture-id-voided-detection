@@ -1,0 +1,1 @@
+ScanditIdVoidedDetection is a library that enables Voided ID Detection capabilities.
