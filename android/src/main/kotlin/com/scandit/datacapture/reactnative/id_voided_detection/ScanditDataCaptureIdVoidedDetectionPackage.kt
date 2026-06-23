@@ -7,12 +7,12 @@
 @file:Suppress("PackageName")
 package com.scandit.datacapture.reactnative.id_voided_detection
 
-import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
+import com.scandit.datacapture.reactnative.core.ScanditReactPackageBase
 
-class ScanditDataCaptureIdVoidedDetectionPackage : ReactPackage {
+class ScanditDataCaptureIdVoidedDetectionPackage : ScanditReactPackageBase() {
     override fun createNativeModules(
         reactContext: ReactApplicationContext
     ): MutableList<NativeModule> = mutableListOf(
@@ -22,4 +22,7 @@ class ScanditDataCaptureIdVoidedDetectionPackage : ReactPackage {
     override fun createViewManagers(
         reactContext: ReactApplicationContext
     ): MutableList<ViewManager<*, *>> = mutableListOf()
+
+    override fun getModuleClasses(): List<Class<out NativeModule>> =
+        listOf(ScanditDataCaptureIdVoidedDetectionModule::class.java)
 }
