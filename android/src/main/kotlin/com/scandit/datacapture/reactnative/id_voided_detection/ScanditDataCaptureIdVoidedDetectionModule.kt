@@ -9,16 +9,10 @@ package com.scandit.datacapture.reactnative.id_voided_detection
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.module.annotations.ReactModule
 
-@ReactModule(name = ScanditDataCaptureIdVoidedDetectionModule.NAME)
 class ScanditDataCaptureIdVoidedDetectionModule(
-    reactContext: ReactApplicationContext
+    private val reactContext: ReactApplicationContext
 ) : ReactContextBaseJavaModule(reactContext) {
 
-    companion object {
-        const val NAME = "ScanditDataCaptureIdVoidedDetection"
-    }
-
-    override fun getName(): String = NAME
+    override fun getName(): String = "ScanditDataCaptureIdVoidedDetection"
 }
